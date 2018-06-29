@@ -3,9 +3,9 @@ Repository for API Consumption case study
 
 This repository houses the file `route.js`. This node application allows users to look up the arrival time for the next Metro Transit train or bus for their desired route, stop, and direction. 
 
-To run, clone repository and install necessary node dependencies by running `npm install` in the command line. To run, the user has two options for checking the next arrival time. 
+To run, clone repository and install necessary node dependencies by running `npm install` in the command line. The user has two options for checking the next arrival time. 
 
-For the first option, the user can input their exact route, stop and direction into the command line. Run the following code: `node route.js 'ROUTE' 'STOP' 'DIRECTION'`. This will output the next arrival. Below is an example of this application. 
+If the user knows the information, they can input their exact route, stop and direction into the command line. Run the following code: `node route.js 'ROUTE' 'STOP' 'DIRECTION'`. This will output the next arrival. Below is an example of this application. 
 
 ![Alt Text](./Gif_images/output_manual.gif)
 
