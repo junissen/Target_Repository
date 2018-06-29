@@ -3,4 +3,4 @@ Repository for API Consumption case study
 
 
 Gif test
-![Alt Text](./output.gif)
+<img src="./output.gif" width="40" height="40" />
