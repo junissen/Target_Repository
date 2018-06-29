@@ -7,9 +7,9 @@ To run, clone repository and install necessary node dependencies by running `npm
 
 For the first option, the user can input their exact route, stop and direction into the command line. Run the following code: `node route.js 'ROUTE' 'STOP' 'DIRECTION'`. This will output the next arrival. Below is an example of this application. 
 
-![Alt Text](./output_manual.gif)
+![Alt Text](./Gif_images/output_manual.gif)
 
 If the user doesn't know the exact route name or stop, the user can also search the application for the information. If the user runs the program without putting in route,stop, and direction variables, they will be prompted. The user just needs to run the following code: `node route.js`. Below is an example of this application with user prompts. 
 
-![Alt Text](./output_inquirer.gif)
+![Alt Text](./Gif_images/output_inquirer.gif)
 
