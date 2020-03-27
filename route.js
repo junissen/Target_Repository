@@ -14,12 +14,12 @@ grabAllRoutesInquirer = () => {
     axios.get("http://svc.metrotransit.org/NexTrip/Routes?format=json")
     .then( function(res) {
 
-        let routeArray = new Array()
+        let routeInquirerArray = new Array()
         let routeObjectArray = new Array()
         
         // Loops through returned results and adds description and object to array
         for (var i = 0; i < res.data.length; i ++) {
-            routeArray.push(res.data[i].Description)
+            routeInquirerArray.push(res.data[i].Description)
             routeObjectArray.push(res.data[i])
         }
 
@@ -29,7 +29,7 @@ grabAllRoutesInquirer = () => {
                 type: 'list',
                 name: 'userRoute',
                 message: 'What route would you like to look up?',
-                choices: routeArray
+                choices: routeInquirerArray
             }
         ]).then(function(inquirerResponse) {
 
@@ -220,9 +220,9 @@ stopInfo = () => {
 scheduleInfo = () => {
 
     // Split routeObject description to determine if transportation is by train or bus
-    let routeArray = routeObject.Description.split(' ')
+    let routeTypeArray = routeObject.Description.split(' ')
 
-    if (routeArray[0] === "METRO") {
+    if (routeTypeArray[0] === "METRO") {
         transportType = "train"
     }
 
@@ -281,6 +281,7 @@ let transportType = "";
 let route = "";
 let stopName = "";
 let direction = "";
+let routeArray = [];
 
 // If user inputs route/stop/direction information, program will grab the variables and 
 // run the grabAllRoutes() function 
@@ -288,6 +289,7 @@ if (process.argv[2]) {
     route = process.argv[2];
     stopName = process.argv[3];
     direction = process.argv[4];
+
     if (direction === "north") {
         directionCardinal = 4
     }
